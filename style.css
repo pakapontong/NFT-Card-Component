@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: hsl(217, 54%, 11%);
+    color: hsl(0, 0%, 100%);
+}
+
+.container {
+    width: 350px;
+    height: 600px;
+    background: hsl(216, 50%, 16%);
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    /* padding: 1rem; */
+    margin-top: .5rem;
+    cursor: pointer;
+    margin: 0 auto
+}
+
+.image .image-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: .5s;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image:hover .image-layer {
+    transform: translateY(0);
+    background: hsla(178, 100%, 50%, .6);
+    cursor: pointer;
+}
+
+/* icon-eye */
+.image-layer img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.content {
+    padding: 1rem 1.5rem;
+}
+
+.content h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.content h1:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.content p {
+    margin: 1.5rem 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: hsl(215, 51%, 70%);
+}
+
+.coins-days {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+    padding-bottom: 1.5rem;
+}
+
+.coins-days .coins {
+    display: flex;
+}
+
+.coins img {
+    object-fit: contain;
+}
+
+.coins h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: .5rem;
+    color: hsl(178, 100%, 50%);
+}
+
+.coins-days .days {
+    display: flex;
+}
+
+.days img {
+    object-fit: contain;
+}
+
+.days h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-left: .5rem;
+    color: hsl(215, 51%, 70%);
+}
+
+.creation {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.creation .img-creation {
+    width: 40px;
+    height: 40px;
+    background: hsl(0, 0%, 100%);
+    padding: 1px;
+    border-radius: 50%;
+}
+
+.img-creation img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.creation h2 {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: hsl(215, 51%, 70%);
+}
+
+.creation span {
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.creation span:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 375px;
+        height: auto;
+    }
+
+    .image {
+        width: 330px;
+        height: 330px;
+    }
+}
